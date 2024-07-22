@@ -1,0 +1,53 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px;
+  width: 200px;
+  text-align: center;
+  padding: 16px;
+  background-color: rgb(131, 172, 248);
+}
+
+.details {
+  padding: 16px;
+}
+
+.offers {
+  margin-top: 10px;
+}
+
+.offers h4 {
+  margin-bottom: 10px;
+}
+
+.offers ul {
+  list-style: none;
+  padding: 0;
+}
+
+.offers ul li {
+  margin: 5px 0;
+}
+
+.offerInput {
+  margin-top: 10px;
+  padding: 5px;
+  width: calc(100% - 12px);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.offerButton {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.offerButton:hover {
+  background-color: #218838;
+}

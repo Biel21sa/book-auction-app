@@ -1,0 +1,64 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  min-height: 80vh;
+  background-color: azure;
+}
+
+.button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.searchContainer {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.searchContainer input {
+  margin-right: 10px;
+  padding: 0.6rem;
+  font-size: 1rem;
+  width: 15rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.searchContainer button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 7rem;
+  height: 2.5rem;
+}
+
+.searchContainer button:hover {
+  background-color: #0056b3;
+}
+
+.booksContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.booksContainer > * {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

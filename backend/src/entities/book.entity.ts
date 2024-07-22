@@ -7,6 +7,7 @@ import {
 } from 'typeorm';
 import { User } from './user.entity';
 import { Auction } from './auction.entity';
+import { Offer } from './offer.entity';
 
 @Entity()
 export class Book {
@@ -25,12 +26,12 @@ export class Book {
   @Column()
   genre: string;
 
-  @Column()
-  userId: number;
-
   @ManyToOne(() => User, (user) => user.books)
   user: User;
 
   @OneToMany(() => Auction, (auction) => auction.book)
   auctions: Auction[];
+
+  @OneToMany(() => Offer, (offer) => offer.book)
+  offers: Offer[];
 }

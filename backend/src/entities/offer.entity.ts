@@ -1,4 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
+import { Auction } from './auction.entity';
 import { User } from './user.entity';
 import { Book } from './book.entity';
 
@@ -10,15 +11,12 @@ export class Offer {
   @Column()
   amount: number;
 
-  @Column()
-  userId: number;
-
-  @Column()
-  bookId: number;
+  @ManyToOne(() => Auction, (auction) => auction.offers)
+  auction: Auction;
 
   @ManyToOne(() => User, (user) => user.offers)
   user: User;
 
-  @ManyToOne(() => Book, (book) => book.auctions)
+  @ManyToOne(() => Book, (book) => book.offers)
   book: Book;
 }
